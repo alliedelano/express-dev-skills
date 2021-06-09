@@ -10,5 +10,8 @@
     <h1>Skill #<%= skill.id %></h1>
     <h3 style="background-color:<%= skill.comfortLevel %>;"><%= skill.skill %></h3>
     <h3><%= skill.encountered ? 'encountered!' : 'have not seen this yet!' %> </h3>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit">delete!</button>
+    </form>
 </body>
 </html>
