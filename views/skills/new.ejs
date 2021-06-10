@@ -9,8 +9,14 @@
 <body>
     <h1>New Skill</h1>
     <form action="/skills" method="POST" autocomplete="off">
-    <input type="text" name="skill">
-    <button type="submit">Save Skill</button>
+        <p>Skill Name:</p>
+        <input type="text" name="skill">
+        <p>Comfort Level (green, yellow, red):</p>
+        <input type="text" name="comfortLevel">
+        <p>Encountered? Check if Yes</p>
+        <input type="checkbox" name="encountered">
+        <p>Ready to submit?</p>
+        <button type="submit">Save Skill</button>
     </form>
 </body>
 </html>

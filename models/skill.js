@@ -15,8 +15,15 @@ module.exports = {
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    updateOne
 };
+
+function updateOne(skill) {
+    skill.skill = req.body.skill,
+    skill.comfortLevel = req.body.comfortLevel,
+    skill.encountered = req.body.encountered
+}
 
 function deleteOne(id) {
     const idx = skills.findIndex(skill => skill.id === parseInt(id));
@@ -25,8 +32,6 @@ function deleteOne(id) {
 
 function create(skill) {
     skill.id = Date.now() % 1000000;
-    skill.comfortLevel = 'red';
-    skill.encountered = false;
     skills.push(skill);
 }
 
